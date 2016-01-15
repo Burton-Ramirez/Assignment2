@@ -1,0 +1,14 @@
+#searchBar {
+  margin: 15px 10px;
+}
+
+.tableWrapper {
+  max-height: 400px;
+  overflow: auto;
+}
+.container{
+  display: block;
+}
+.row{
+  background-color: #FFFFF0; 
+}
