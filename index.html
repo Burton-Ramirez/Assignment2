@@ -12,8 +12,6 @@
       <nav class="navbar navbar-default nabar-fixed-top">
         <div class= "container-fluid" >
           <h1 class="nav-brand">UF Directory App</h1>
-            <!-- Was messing around with navbar, this link was my documentation
-http://getbootstrap.com/components/#navbar-forms -->
             <form class="navbar-form navbar-left" role= search>
                 <div class="input-group" id="searchBar">
                   <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-search"></span></span>
@@ -45,7 +43,12 @@ http://getbootstrap.com/components/#navbar-forms -->
       </div>
       <div class="col-md-5">
         <div class="jumbotron">
+          <div ng-hide = "defaultMessage">
+            <h3>Click a listing to view detailed information.</h3>
+          </div>
+          <div ng-hide = "details">
           <h2>Detailed Information</h2>
+
              <div class="tableWrapper"  >
                <table class="table table-striped table-hover"  >
                  <tr>
@@ -72,12 +75,10 @@ http://getbootstrap.com/components/#navbar-forms -->
                    </tr>
                    <td>{{address}}</td>
                  </table>
+               </div>
             </div>
-          </div>
-        </div>
-        <div>
-          <div class="col-md-8">
-            <div>
+          <div >
+            <div ng-hide = "showAddListing">
               <h4 class="newListingTitle">New Listing:</h4>
                 <form class = "form-horizontal" role = "form">
                   <table class="addListingTable">
@@ -103,7 +104,9 @@ http://getbootstrap.com/components/#navbar-forms -->
                 </form>
                 <button ng-click="addListing(entry)" class="btn btn-alt">Add Listing</button>
               </div>
+              <button ng-hide="addListButton" ng-click="addButton()" class="btn btn-alt">New Listing</button>
             </div>
+          </div>
           </div>
         </div>
       </div>

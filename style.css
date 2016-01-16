@@ -1,23 +1,27 @@
 #searchBar {
   margin: 15px 10px;
 }
-
+body {
+    background-color: orange;
+}
 .nav-brand {
   float: center;
   padding-left: 30px;
+  color : white;
 }
-
 .navbar-form {
   align-self: auto;
 }
-
 .tableWrapper {
-  max-height: 400px;
+  max-height: 600px;
   overflow: auto;
 }
 .container{
   display: block;
 }
-.row{
-  background-color: #FFFFF0; 
+.navbar{
+  background-color: blue;
+}
+.tableWrapper{
+  background-color: #D0D0D0  ;
 }
